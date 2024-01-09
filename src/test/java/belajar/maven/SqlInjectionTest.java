@@ -22,7 +22,7 @@ public class SqlInjectionTest {
 
         while (resultSet.next()) {
 
-            String KodeCabang = resultSet.getInt("kodeCabang");
+            String KodeCabang = resultSet.getString("kodeCabang");
             String NamaCabang = resultSet.getString("NamaCabang");
 
 
