@@ -33,4 +33,16 @@ public class ConnectionTest {
             Assertions.fail(exception);
         }
     }
+    @Test
+    void testConnectionClose() {
+        String jdbcurl = "jdbc:mysql://localhost:3306/wms_db";
+        String username = "root";
+        String password = "";
+
+        try (Connection connection = DriverManager.getConnection(jdbcurl, username, password)){
+            System.out.println("Sukses tutup konek ke database");
+        }catch (SQLException exception){
+            Assertions.fail(exception);
+        }
+    }
 }
